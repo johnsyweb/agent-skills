@@ -1,11 +1,11 @@
 # agent-skills
 
-Installable agent skills for writing pull request descriptions and keeping a README up to date.
+Installable agent skills for writing pull request descriptions, keeping a README up to date, and drafting Hubbard-form risk statements.
 
 [![License: MIT](https://img.shields.io/github/license/johnsyweb/agent-skills)](LICENSE)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
-A public home for skills that make common git-host work repeatable.
+A public home for skills that make common writing work repeatable.
 
 ## Getting started
 
@@ -27,6 +27,14 @@ Then `/readme`.
 
 **readme** ensures the root `README.md` is clear above the fold and up to date with the repo.
 
+```bash
+npx skills add johnsyweb/agent-skills@risk-statements -g
+```
+
+Then `/risk-statements`. Pass an existing risk, a worry, or a register when you have one.
+
+**risk-statements** interviews into a Hubbard-form statement: a 90% CI that an event occurs leading to an outcome, that causes an impact, over a time horizon, with an evidence grade. The form follows Douglas Hubbard, *How to Measure Anything*.
+
 ## Help
 
 Open an issue on [johnsyweb/agent-skills](https://github.com/johnsyweb/agent-skills/issues).
@@ -37,7 +45,7 @@ Open an issue on [johnsyweb/agent-skills](https://github.com/johnsyweb/agent-ski
 
 ## Development status
 
-Experimental — two skills, still being shaped.
+Experimental — three skills, still being shaped.
 
 ## Local development
 
@@ -49,6 +57,7 @@ cd agent-skills
 mise run bootstrap
 ln -sfn "$PWD/pr-description" ~/.agents/skills/pr-description
 ln -sfn "$PWD/readme" ~/.agents/skills/readme
+ln -sfn "$PWD/risk-statements" ~/.agents/skills/risk-statements
 ```
 
 ## Contributing
