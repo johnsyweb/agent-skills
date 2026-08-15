@@ -21,10 +21,13 @@ Work these in parallel.
 
 **Observability.** Repo docs, runbooks, and recent PR bodies for dashboards, monitors, error-trackers, and log aggregators that apply to this change. Done when every relevant link found is in hand (the set may be empty).
 
+**Template hunt.** On the default branch: `pull_request_template` files in `.github/`, the root, and `docs/`; any `PULL_REQUEST_TEMPLATE/` directory; `.gitlab/merge_request_templates/`. None in this repo → the owner's public `.github` repo. One file is chosen. Several are candidates. Done when every candidate is listed (the list may be empty).
+
 ## 2. Ask
 
 One round, only for gaps:
 
+- **Template** — when the hunt found several. Present them and ask which to use.
 - **Card** — always. Present each candidate and ask which is the card. If the hunt was empty, ask whether a card exists.
 - **Context** — the *why*, if it is not already in the confirmed card or the prompter's words.
 - **Confirmation** — the post-publish check, if observability was empty: how this change will be known to have worked after publish.
@@ -35,7 +38,9 @@ Done when every gap above has a sourced answer.
 
 ## 3. Emit
 
-Title on its own line, then:
+**Template.** When a template is chosen, **augment** it from [TEMPLATE.md](TEMPLATE.md). Stop when that file's Done is met.
+
+When the hunt was empty, title on its own line, then:
 
 #### Card
 
