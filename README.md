@@ -63,6 +63,10 @@ Pushes to `main` run [semantic-release](https://github.com/semantic-release/sema
 npx skills add johnsyweb/agent-skills@<skill> -g
 ```
 
+## Security
+
+[Dependabot](https://docs.github.com/en/code-security/dependabot) opens weekly pull requests for npm packages and GitHub Actions.
+
 ## License
 
 [MIT](LICENSE)
