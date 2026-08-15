@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/johnsyweb/agent-skills/compare/v1.1.0...v1.1.1) (2026-08-15)
+
+
+### Bug Fixes
+
+* quote the risk-statements description for YAML ([06f5dd1](https://github.com/johnsyweb/agent-skills/commit/06f5dd1e1fb099729e37735798c890ad8779dddf))
+
 # [1.1.0](https://github.com/johnsyweb/agent-skills/compare/v1.0.0...v1.1.0) (2026-08-15)
 
 
