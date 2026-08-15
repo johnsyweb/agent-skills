@@ -46,8 +46,7 @@ This repo uses [mise](https://mise.jdx.dev) for tools and [aube](https://github.
 ```bash
 git clone https://github.com/johnsyweb/agent-skills.git
 cd agent-skills
-mise install
-aube install
+mise run bootstrap
 ln -sfn "$PWD/pr-description" ~/.agents/skills/pr-description
 ln -sfn "$PWD/readme" ~/.agents/skills/readme
 ```
