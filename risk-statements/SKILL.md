@@ -1,6 +1,6 @@
 ---
 name: risk-statements
-description: Interview into Hubbard-form risk statements: 90% CI, event, outcome, impact, horizon, evidence.
+description: "Interview into Hubbard-form risk statements: 90% CI, event, outcome, impact, horizon, evidence."
 disable-model-invocation: true
 argument-hint: "Existing risk, worry, or register, if any"
 ---
