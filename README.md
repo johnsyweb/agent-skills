@@ -74,11 +74,7 @@ Commits follow [Conventional Commits](https://www.conventionalcommits.org/).
 
 ## Releasing
 
-Pushes to `main` run [semantic-release](https://github.com/semantic-release/semantic-release). `feat` and `fix` commits cut a GitHub Release and update [CHANGELOG.md](CHANGELOG.md). People who already installed a skill run `npx skills update`. New installs:
-
-```bash
-npx skills add johnsyweb/agent-skills@<skill> -g
-```
+Pushes to `main` run [semantic-release](https://github.com/semantic-release/semantic-release). `feat` and `fix` commits cut a GitHub Release and update [CHANGELOG.md](CHANGELOG.md). Install and update commands live in Getting started.
 
 ## Security
 
