@@ -31,3 +31,7 @@ Open an issue on [johnsyweb/agent-skills](https://github.com/johnsyweb/agent-ski
 ## Maintainers
 
 [johnsyweb](https://github.com/johnsyweb)
+
+## Development status
+
+Experimental — two skills, still being shaped.
