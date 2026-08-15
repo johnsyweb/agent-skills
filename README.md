@@ -49,3 +49,11 @@ ln -sfn "$PWD/agent-skills/readme" ~/.agents/skills/readme
 ## Contributing
 
 Commits follow [Conventional Commits](https://www.conventionalcommits.org/).
+
+## Releasing
+
+Push to `main`. People who already installed a skill run `npx skills update`. New installs:
+
+```bash
+npx skills add johnsyweb/agent-skills@<skill> -g
+```
