@@ -45,3 +45,7 @@ git clone https://github.com/johnsyweb/agent-skills.git
 ln -sfn "$PWD/agent-skills/pr-description" ~/.agents/skills/pr-description
 ln -sfn "$PWD/agent-skills/readme" ~/.agents/skills/readme
 ```
+
+## Contributing
+
+Commits follow [Conventional Commits](https://www.conventionalcommits.org/).
