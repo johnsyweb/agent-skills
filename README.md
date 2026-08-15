@@ -15,25 +15,25 @@ A public home for skills that make common writing work repeatable.
 
 ## Getting started
 
-Install a skill, then invoke it by name:
+Install the whole package globally:
+
+```bash
+npx skills add johnsyweb/agent-skills -g
+```
+
+The CLI lists the skills and lets you pick which ones and which agents. To take every skill without prompts:
+
+```bash
+npx skills add johnsyweb/agent-skills -g --skill '*' -y
+```
+
+Or one skill, for example:
 
 ```bash
 npx skills add johnsyweb/agent-skills@pr-description -g
 ```
 
-Then `/pr-description`. Pass a card URL or id when you have one.
-
-```bash
-npx skills add johnsyweb/agent-skills@readme -g
-```
-
-Then `/readme`.
-
-```bash
-npx skills add johnsyweb/agent-skills@risk-statements -g
-```
-
-Then `/risk-statements`. Pass an existing risk, a worry, or a register when you have one.
+Then invoke by name: `/pr-description`, `/readme`, `/risk-statements`.
 
 ## Help
 
