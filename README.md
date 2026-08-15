@@ -7,6 +7,12 @@ Installable agent skills for writing pull request descriptions, keeping a README
 
 A public home for skills that make common writing work repeatable.
 
+## Skills
+
+- **pr-description** — a pull request title and Five-C body (Card, Context, Change, Confirmation, Considerations) from the branch's commits and a short conversation. When the repo has a pull-request template, the Five Cs augment it. The Five Cs follow [On Writing Pull Request Descriptions Well](https://www.johnsy.com/blog/2026/02/17/on-writing-pull-request-descriptions-well/).
+- **readme** — a root `README.md` that is clear above the fold and up to date with the repo.
+- **risk-statements** — a Hubbard-form statement: a 90% CI that an event occurs leading to an outcome, that causes an impact, over a time horizon, with an evidence grade. The form follows Douglas Hubbard, *How to Measure Anything*.
+
 ## Getting started
 
 Install a skill, then invoke it by name:
@@ -17,23 +23,17 @@ npx skills add johnsyweb/agent-skills@pr-description -g
 
 Then `/pr-description`. Pass a card URL or id when you have one.
 
-**pr-description** drafts a pull request title and Five-C body (Card, Context, Change, Confirmation, Considerations) from the branch's commits and a short conversation. When the repo has a pull-request template, the Five Cs augment it. The Five Cs follow [On Writing Pull Request Descriptions Well](https://www.johnsy.com/blog/2026/02/17/on-writing-pull-request-descriptions-well/).
-
 ```bash
 npx skills add johnsyweb/agent-skills@readme -g
 ```
 
 Then `/readme`.
 
-**readme** ensures the root `README.md` is clear above the fold and up to date with the repo.
-
 ```bash
 npx skills add johnsyweb/agent-skills@risk-statements -g
 ```
 
 Then `/risk-statements`. Pass an existing risk, a worry, or a register when you have one.
-
-**risk-statements** interviews into a Hubbard-form statement: a 90% CI that an event occurs leading to an outcome, that causes an impact, over a time horizon, with an evidence grade. The form follows Douglas Hubbard, *How to Measure Anything*.
 
 ## Help
 
