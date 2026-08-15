@@ -51,12 +51,9 @@ The *why*, a couple of sentences, in the card's, the prompter's, or the user's w
 
 A short *how* that accounts for every commit in the range.
 
-See individual commits for finer details.
-
 #### Confirmation
 
-1. Verification already in the change (specs, unit, integration, acceptance — those that exist).
-2. After publish: linked dashboards, monitors, error-trackers, and log aggregators where they exist, otherwise the check from step 2. What improvement looks like, how a regression would show, what happens post-publish.
+A markdown checklist. Checked rows (`- [x]`) for verification already in the change (specs, unit, integration, acceptance — those that exist). Unchecked rows (`- [ ]`) for after publish: linked dashboards, monitors, error-trackers, and log aggregators where they exist, otherwise the check from step 2. Include what improvement looks like, how a regression would show, and what happens post-publish.
 
 #### Considerations
 
@@ -64,4 +61,4 @@ Sourced alternatives, doubts, and reviewer questions. "None, because …" counts
 
 **Title.** The card's title when Card is present; otherwise a line from Change, as confirmed.
 
-Done when every heading that belongs is filled, Card is omitted only on confirmed absence, both Confirmation halves are present, and every sourced answer appears. Stop — the body is the product.
+Done when every heading that belongs is filled, Card is omitted only on confirmed absence, Confirmation is a checklist with a checked row for every test that exists and at least one unchecked post-publish row, and every sourced answer appears. Stop — the body is the product.
