@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/johnsyweb/agent-skills/compare/v1.0.0...v1.1.0) (2026-08-15)
+
+
+### Features
+
+* add a Hubbard-form risk-statements skill ([ac1034a](https://github.com/johnsyweb/agent-skills/commit/ac1034a716480901996af5ce6109bad4b6468959))
+
 # 1.0.0 (2026-08-15)
 
 
