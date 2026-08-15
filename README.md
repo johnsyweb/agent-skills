@@ -3,6 +3,7 @@
 Installable agent skills for writing pull request descriptions and keeping a README up to date.
 
 [![License: MIT](https://img.shields.io/github/license/johnsyweb/agent-skills)](LICENSE)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 A public home for skills that make common git-host work repeatable.
 
@@ -54,7 +55,7 @@ Commits follow [Conventional Commits](https://www.conventionalcommits.org/).
 
 ## Releasing
 
-Push to `main`. People who already installed a skill run `npx skills update`. New installs:
+Pushes to `main` run [semantic-release](https://github.com/semantic-release/semantic-release). `feat` and `fix` commits cut a GitHub Release and update [CHANGELOG.md](CHANGELOG.md). People who already installed a skill run `npx skills update`. New installs:
 
 ```bash
 npx skills add johnsyweb/agent-skills@<skill> -g
