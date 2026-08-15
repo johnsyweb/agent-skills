@@ -1,0 +1,47 @@
+name: Update npm dependencies
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  aube:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true
+
+      - name: Install tools
+        uses: jdx/mise-action@3c2e0cf82a5b2e5249f0d3635a4d83d0ae861518 # v4.2.5
+
+      - name: Update dependencies
+        run: aube update --latest
+
+      - name: Open pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet -- package.json aube-lock.yaml; then
+            echo "No dependency updates"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B chore/aube-deps
+          git add package.json aube-lock.yaml
+          git commit -m "chore(deps): update npm dependencies"
+          git push -f origin chore/aube-deps
+          if ! gh pr view chore/aube-deps >/dev/null 2>&1; then
+            gh pr create \
+              --head chore/aube-deps \
+              --title "chore(deps): update npm dependencies" \
+              --label dependencies \
+              --body "Weekly \`aube update --latest\`. Dependabot does not refresh \`aube-lock.yaml\`."
+          fi
