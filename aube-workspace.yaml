@@ -1,0 +1,7 @@
+# paranoid: true also sets strictStoreIntegrity, which fails this tree:
+# semantic-release → npm → @npmcli/* packuments have no dist.integrity.
+jailBuilds: true
+trustPolicy: no-downgrade
+minimumReleaseAgeStrict: true
+strictDepBuilds: true
+advisoryCheck: required
