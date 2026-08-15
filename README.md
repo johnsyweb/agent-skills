@@ -41,12 +41,15 @@ Experimental — two skills, still being shaped.
 
 ## Local development
 
-Clone this repository and symlink each skill directory into `~/.agents/skills` so edits are live:
+This repo uses [mise](https://mise.jdx.dev) for tools and [aube](https://github.com/jdx/aube) for packages. Clone, install, and symlink each skill directory into `~/.agents/skills` so edits are live:
 
 ```bash
 git clone https://github.com/johnsyweb/agent-skills.git
-ln -sfn "$PWD/agent-skills/pr-description" ~/.agents/skills/pr-description
-ln -sfn "$PWD/agent-skills/readme" ~/.agents/skills/readme
+cd agent-skills
+mise install
+aube install
+ln -sfn "$PWD/pr-description" ~/.agents/skills/pr-description
+ln -sfn "$PWD/readme" ~/.agents/skills/readme
 ```
 
 ## Contributing
