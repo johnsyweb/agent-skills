@@ -2,6 +2,8 @@
 
 Installable agent skills for writing pull request descriptions and keeping a README up to date.
 
+[![License: MIT](https://img.shields.io/github/license/johnsyweb/agent-skills)](LICENSE)
+
 A public home for skills that make common git-host work repeatable.
 
 ## Getting started
@@ -57,3 +59,7 @@ Push to `main`. People who already installed a skill run `npx skills update`. Ne
 ```bash
 npx skills add johnsyweb/agent-skills@<skill> -g
 ```
+
+## License
+
+[MIT](LICENSE)
