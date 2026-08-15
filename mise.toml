@@ -1,0 +1,7 @@
+[tools]
+node = "24"
+aube = "1.40.0"
+
+[tasks.bootstrap]
+description = "Install tools and dependencies"
+run = "mise install && aube install"
