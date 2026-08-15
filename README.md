@@ -65,7 +65,7 @@ npx skills add johnsyweb/agent-skills@<skill> -g
 
 ## Security
 
-[Dependabot](https://docs.github.com/en/code-security/dependabot) opens weekly pull requests for GitHub Actions. A scheduled workflow runs `aube update --latest` and opens a pull request for npm packages, because Dependabot does not refresh `aube-lock.yaml`.
+[Dependabot](https://docs.github.com/en/code-security/dependabot) opens weekly pull requests for GitHub Actions. A scheduled workflow runs `aube update --latest` and opens a pull request for npm packages, because Dependabot does not refresh `aube-lock.yaml`. Installs use the [aube paranoid bundle](https://aube.jdx.dev/security) except `strictStoreIntegrity`, which currently fails on `semantic-release`'s `npm` subtree.
 
 ## License
 
