@@ -35,3 +35,13 @@ Open an issue on [johnsyweb/agent-skills](https://github.com/johnsyweb/agent-ski
 ## Development status
 
 Experimental — two skills, still being shaped.
+
+## Local development
+
+Clone this repository and symlink each skill directory into `~/.agents/skills` so edits are live:
+
+```bash
+git clone https://github.com/johnsyweb/agent-skills.git
+ln -sfn "$PWD/agent-skills/pr-description" ~/.agents/skills/pr-description
+ln -sfn "$PWD/agent-skills/readme" ~/.agents/skills/readme
+```
