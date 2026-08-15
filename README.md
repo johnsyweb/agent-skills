@@ -15,3 +15,15 @@ npx skills add johnsyweb/agent-skills@pr-description -g
 ```
 
 Then invoke with `/pr-description`. Pass a card URL or id as an argument when you have one.
+
+## readme
+
+Ensure the root `README.md` is clear above the fold and up to date with the repo.
+
+### Install
+
+```bash
+npx skills add johnsyweb/agent-skills@readme -g
+```
+
+Then invoke with `/readme`.
