@@ -23,3 +23,11 @@ npx skills add johnsyweb/agent-skills@readme -g
 Then `/readme`.
 
 **readme** ensures the root `README.md` is clear above the fold and up to date with the repo.
+
+## Help
+
+Open an issue on [johnsyweb/agent-skills](https://github.com/johnsyweb/agent-skills/issues).
+
+## Maintainers
+
+[johnsyweb](https://github.com/johnsyweb)
