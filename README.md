@@ -35,6 +35,14 @@ npx skills add johnsyweb/agent-skills@pr-description -g
 
 Then invoke by name: `/pr-description`, `/readme`, `/risk-statements`.
 
+### Update
+
+```bash
+npx skills update -g
+```
+
+That pulls the latest from GitHub for every global skill the CLI recorded. One skill: `npx skills update readme`.
+
 ## Help
 
 Open an issue on [johnsyweb/agent-skills](https://github.com/johnsyweb/agent-skills/issues).
