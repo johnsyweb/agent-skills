@@ -1,29 +1,25 @@
 # agent-skills
 
-Agent skills from [johnsyweb](https://github.com/johnsyweb).
+Installable agent skills for writing pull request descriptions and keeping a README up to date.
 
-## pr-description
+A public home for skills that make common git-host work repeatable.
 
-Draft a pull request title and Five-C body (Card, Context, Change, Confirmation, Considerations) from the branch's commits and a short conversation. When the repo has a pull-request template, the Five Cs augment it.
+## Getting started
 
-The Five Cs follow [On Writing Pull Request Descriptions Well](https://www.johnsy.com/blog/2026/02/17/on-writing-pull-request-descriptions-well/).
-
-### Install
+Install a skill, then invoke it by name:
 
 ```bash
 npx skills add johnsyweb/agent-skills@pr-description -g
 ```
 
-Then invoke with `/pr-description`. Pass a card URL or id as an argument when you have one.
+Then `/pr-description`. Pass a card URL or id when you have one.
 
-## readme
-
-Ensure the root `README.md` is clear above the fold and up to date with the repo.
-
-### Install
+**pr-description** drafts a pull request title and Five-C body (Card, Context, Change, Confirmation, Considerations) from the branch's commits and a short conversation. When the repo has a pull-request template, the Five Cs augment it. The Five Cs follow [On Writing Pull Request Descriptions Well](https://www.johnsy.com/blog/2026/02/17/on-writing-pull-request-descriptions-well/).
 
 ```bash
 npx skills add johnsyweb/agent-skills@readme -g
 ```
 
-Then invoke with `/readme`.
+Then `/readme`.
+
+**readme** ensures the root `README.md` is clear above the fold and up to date with the repo.
