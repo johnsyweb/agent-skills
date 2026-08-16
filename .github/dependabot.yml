@@ -16,5 +16,12 @@ updates:
       all-actions:
         patterns:
           - "*"
+      security-patches:
+        applies-to: security-updates
+        patterns:
+          - "*"
+        update-types:
+          - patch
+          - minor
     labels:
       - dependencies
