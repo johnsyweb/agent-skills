@@ -57,7 +57,7 @@ Experimental — three skills, still being shaped.
 
 ## Local development
 
-This repo uses [mise](https://mise.jdx.dev) for tools and [aube](https://github.com/jdx/aube) for packages. Clone, install, and symlink each skill directory into `~/.agents/skills` so edits are live:
+This repo uses [mise](https://mise.jdx.dev) for tools and [aube](https://aube.jdx.dev/) for packages (see [`docs/adr/`](docs/adr/)). Clone, install, and symlink each skill directory into `~/.agents/skills` so edits are live:
 
 ```bash
 git clone https://github.com/johnsyweb/agent-skills.git
@@ -66,6 +66,8 @@ mise run bootstrap
 ln -sfn "$PWD/pr-description" ~/.agents/skills/pr-description
 ln -sfn "$PWD/readme" ~/.agents/skills/readme
 ln -sfn "$PWD/risk-statements" ~/.agents/skills/risk-statements
+mise run update             # after git pull
+mise run update-deps        # within-range bumps
 ```
 
 ## Contributing
@@ -78,7 +80,7 @@ Pushes to `main` run [semantic-release](https://github.com/semantic-release/sema
 
 ## Security
 
-[Dependabot](https://docs.github.com/en/code-security/dependabot) opens weekly pull requests for GitHub Actions. A scheduled workflow runs `aube update --latest` and opens a pull request for npm packages, because Dependabot does not refresh `aube-lock.yaml`. Installs use the [aube paranoid bundle](https://aube.jdx.dev/security) except `strictStoreIntegrity`, which currently fails on `semantic-release`'s `npm` subtree.
+[Mend Renovate](https://docs.renovatebot.com/) owns npm and GitHub Actions updates via [johnsyweb/renovate-config](https://github.com/johnsyweb/renovate-config) (seven-day cooling; automerge when checks are green). The `aube-lock` workflow regenerates `aube-lock.yaml` on Renovate branches. Installs use jailed builds and related aube strictness; full `paranoid: true` is off because `strictStoreIntegrity` fails on `semantic-release`'s `npm` subtree — see [docs/adr/0001-aube-package-manager.md](docs/adr/0001-aube-package-manager.md) and [docs/adr/0002-renovate-for-dependency-updates.md](docs/adr/0002-renovate-for-dependency-updates.md).
 
 ## License
 

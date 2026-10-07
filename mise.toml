@@ -3,5 +3,13 @@ node = "24"
 aube = "1.40.0"
 
 [tasks.bootstrap]
-description = "Install tools and dependencies"
+description = "Install tools and a frozen dependency tree"
+run = "mise install && aube ci"
+
+[tasks.update]
+description = "Refresh tools and dependencies after git pull"
 run = "mise install && aube install"
+
+[tasks.update-deps]
+description = "Show outdated packages and bump within package.json ranges"
+run = "aube outdated || true; aube update"

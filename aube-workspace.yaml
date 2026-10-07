@@ -2,6 +2,9 @@
 # semantic-release → npm → @npmcli/* packuments have no dist.integrity.
 jailBuilds: true
 trustPolicy: no-downgrade
+minimumReleaseAge: 10080
 minimumReleaseAgeStrict: true
 strictDepBuilds: true
 advisoryCheck: required
+packageManagerStrictVersion: true
+allowBuilds: {}
