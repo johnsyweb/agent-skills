@@ -9,7 +9,7 @@ Dependabot’s npm ecosystem does not refresh `aube-lock.yaml`. A custom Monday 
 ## Decision
 
 1. **Mend Renovate** via [johnsyweb/renovate-config](https://github.com/johnsyweb/renovate-config).
-2. **aube-lock** on `renovate/**` regenerates the lock, runs `./script/cibuild`, and publishes Check Runs on the final HEAD.
+2. **aube-lock** on `renovate/**` regenerates the lock, runs `aube ci`, and publishes Check Runs on the final HEAD.
 3. **Membership** in [johnsyweb/github-infra](https://github.com/johnsyweb/github-infra).
 4. **Cutover** — remove Dependabot, Dependabot auto-merge, and the scheduled `aube-update` workflow in the same change.
 5. **Cooling** — Renovate seven days; aube `minimumReleaseAge: 10080`.

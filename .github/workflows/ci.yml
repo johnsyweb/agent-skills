@@ -2,8 +2,6 @@ name: CI
 
 on:
   pull_request:
-  push:
-    branches: [main]
 
 permissions:
   contents: read
@@ -27,4 +25,4 @@ jobs:
             ${{ runner.os }}-aube-
 
       - name: Verify install
-        run: ./script/cibuild
+        run: aube ci
