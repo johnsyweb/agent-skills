@@ -1,0 +1,16 @@
+name: aube-lock
+
+on:
+  push:
+    branches: ['renovate/**']
+
+permissions:
+  contents: write
+  checks: write
+
+jobs:
+  aube-lock:
+    uses: johnsyweb/renovate-config/.github/workflows/aube-lock.yml@aae70b6bc4f9f59e61beacf04cab77852d1701b9
+    with:
+      verify_command: ./script/cibuild
+      check_name: renovate-verify
