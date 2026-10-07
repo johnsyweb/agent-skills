@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: jdx/mise-action@7a4e45a543138629540c9a1616d08632b893e492 # v5.0.1
+        with:
+          install: true
+
+      - name: Cache aube store
+        uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
+        with:
+          path: ~/.local/share/aube/store
+          key: ${{ runner.os }}-aube-${{ hashFiles('aube-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-aube-
+
+      - name: Verify install
+        run: ./script/cibuild

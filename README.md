@@ -72,7 +72,11 @@ mise run update-deps        # within-range bumps
 
 ## Contributing
 
-Commits follow [Conventional Commits](https://www.conventionalcommits.org/).
+Commits follow [Conventional Commits](https://www.conventionalcommits.org/). `main` requires a green `build` check (CI and aube-lock both publish that name). Apply or refresh the ruleset with:
+
+```bash
+bash scripts/apply-branch-protection.sh
+```
 
 ## Releasing
 
