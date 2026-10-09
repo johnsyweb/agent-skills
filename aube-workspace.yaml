@@ -7,4 +7,3 @@ minimumReleaseAgeStrict: true
 strictDepBuilds: true
 advisoryCheck: required
 packageManagerStrictVersion: true
-allowBuilds: {}
