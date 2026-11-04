@@ -1,6 +1,6 @@
 [tools]
 node = "24"
-aube = "2.8.3"
+aube = "2.8.4"
 
 [tasks.bootstrap]
 description = "Install tools and a frozen dependency tree"
